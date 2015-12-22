@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+.x-header-text, .x-btn-default-small .x-btn-inner, .x-btn-default-medium .x-btn-inner, .x-btn-default-large .x-btn-inner, .x-btn-default-toolbar-small .x-btn-inner, .x-btn-default-toolbar-medium .x-btn-inner, .x-btn-default-toolbar-large .x-btn-inner, .x-menu-item-text, .x-html-editor-tb .x-font-select, .x-panel-header-default, .x-panel-header-text-default, .x-panel-header-default-framed, .x-tip-header, .x-tip-body, .x-form-invalid-tip-body, .x-tip-header-text, .x-progress-text, .x-toolbar, .x-toolbar .x-form-item-label, .x-toolbar .x-toolbar-text, .x-window-header-text-default, .x-tab-bar, .x-tab button, .x-grid-rowbody, .x-grid-row .x-grid-cell, .x-grid-group-title, .x-grid-row-editor .x-form-field, .x-grid-row-editor .x-form-display-field, .x-form-invalid-under, .x-fieldset-header, .x-column-header, .x-mask-msg div, .x-btn-group-header-text-default-framed, table.x-datepicker-inner a, .x-monthpicker-item, .x-dd-drag-ghost{ 
+	font-size: 12px;            
+}
+/*下拉列表项高度*/
+.x-boundlist-item { height: 21px;}
+/*重点文字样式：红色加粗*/
+.weightfont{font-weight:bold;}
+.red{color:red;}
+.black{color:black;}
+.blue{color:blue;}
+.link{color:blue;text-decoration:underline;cursor:pointer}
+/*必填项*号样式*/
+.requiredflag{font-weight:bold;color:red;}
+.no-icon {display:none;}
+/*.header_bg{background-color:rgb(232,236,237);}*/
+.header_bg{background-color:rgb(255,255,255);}
+.header_logo{
+	padding-top: 14px; 
+	padding-left: 30px;
+}
+.header_systemName{
+	font-family:Arial,"微软雅黑","黑体",sans-serif;
+	font-size:24px;
+	line-height:24px;
+	text-align: left;
+	padding-top: 28px; 
+	/*background-color:rgb(232,236,237);*/
+	background-color:rgb(255,255,255);
+}
+.header_welcomemsg{
+	padding-top: 10px; 
+	padding-right: 2px; 
+	font-size:14px;
+	line-height:16px;
+}
+.hintico{
+	margin-left:5px;
+	width:16px;
+	height:16px;
+}
+.btn-add,.btn-edit,.btn-delete,.btn-detail,
+.btn-grantAuthor, .btn-viewUser, .btn-assignRole, .btn-viewAuthor, 
+.btn-checkNumber, .btn-tasking, .btn-grounding, .btn-offShelves, .btn-transfer,
+.btn-openStatus,.btn-closeStatus,.btn-save,.btn-search,.btn-clear,.btn-cancel,
+.btn-export,.btn-import, .btn-drawUp,
+.add-node,.node-delete,.node-edit{background-image: url(../../images/icon/btn/edit.png) !important;background-size:16px 16px;}
+.btn-add{background-image: url(../../images/icon/btn/add.png) !important;}
+.btn-delete,.node-delete{background-image: url(../../images/icon/btn/delete.png) !important;}
+.btn-detail{background-image: url(../../images/icon/btn/detail.png) !important;}
+.add-node{background-image: url(../../images/icon/addNode.png) !important;}
+.btn-grantAuthor{background-image: url(../../images/icon/btn/grantauthor.png) !important;}
+.btn-assignUser{background-image: url(../../images/icon/btn/assignuser.png) !important;}
+.btn-assignRole{background-image: url(../../images/icon/btn/assignrole.png) !important;}
+.btn-viewAuthor{background-image: url(../../images/icon/btn/viewauthor.png) !important;}
+.btn-checkNumber{background-image: url(../../images/icon/btn/checknumber.png) !important;}
+.btn-tasking{background-image: url(../../images/icon/btn/tasking.png) !important;}
+.btn-grounding{background-image: url(../../images/icon/btn/grounding.png) !important;}
+.btn-offShelves{background-image: url(../../images/icon/btn/offshelves.png) !important;}
+.btn-transfer{background-image: url(../../images/icon/btn/transfer.png) !important;}
+.btn-openStatus{background-image: url(../../images/icon/btn/openstatus.png) !important;}
+.btn-closeStatus{background-image: url(../../images/icon/btn/closestatus.png) !important;}
+.btn-save{background-image: url(../../images/icon/btn/save.png) !important;}
+.btn-search{background-image: url(../../images/icon/btn/search.png) !important;}
+.btn-clear{background-image: url(../../images/icon/btn/clear.png) !important;}
+.btn-cancel{background-image: url(../../images/icon/btn/cancel.png) !important;}
+.btn-export{background-image: url(../../images/icon/btn/export.png) !important;}
+.btn-import{background-image: url(../../images/icon/btn/import.png) !important;}
+.btn-drawUp{background-image: url(../../images/icon/btn/drawup.png) !important;}
+/*菜单图标*/
+.menu-baseinfo{background-image: url(../../images/icon/menu/baseinfo.png) !important;background-size:16px 16px;}
+.menu-supplier{background-image: url(../../images/icon/menu/supplier.png) !important;background-size:16px 16px;}
+.menu-demand{background-image: url(../../images/icon/menu/demand.png) !important;background-size:16px 16px;}
+.menu-goods{background-image: url(../../images/icon/menu/goods.png) !important;background-size:16px 16px;}
+.menu-area{background-image: url(../../images/icon/menu/area.png) !important;background-size:16px 16px;}
+.menu-location{background-image: url(../../images/icon/menu/location.png) !important;background-size:16px 16px;}
+.menu-instock{background-image: url(../../images/icon/menu/instock.png) !important;background-size:16px 16px;}
+.menu-instockreservation{background-image: url(../../images/icon/menu/instockreservation.png) !important;background-size:16px 16px;}
+.menu-instockchecknumber{background-image: url(../../images/icon/menu/instockchecknumber.png) !important;background-size:16px 16px;}
+.menu-instocktasking{background-image: url(../../images/icon/menu/instocktasking.png) !important;background-size:16px 16px;}
+.menu-instockshelves{background-image: url(../../images/icon/menu/instockshelves.png) !important;background-size:16px 16px;}
+.menu-outstock{background-image: url(../../images/icon/menu/outstock.png) !important;background-size:16px 16px;}
+.menu-outstockreservation{background-image: url(../../images/icon/menu/outstockreservation.png) !important;background-size:16px 16px;}
+.menu-outstocktasking{background-image: url(../../images/icon/menu/outstocktasking.png) !important;background-size:16px 16px;}
+.menu-outstockshelves{background-image: url(../../images/icon/menu/outstockshelves.png) !important;background-size:16px 16px;}
+.menu-cancelstock{background-image: url(../../images/icon/menu/cancelstock.png) !important;background-size:16px 16px;}
+.menu-cancelstockreservation{background-image: url(../../images/icon/menu/cancelstockreservation.png) !important;background-size:16px 16px;}
+.menu-outstockoperation{background-image: url(../../images/icon/menu/outstockoperation.png) !important;background-size:16px 16px;}
+.menu-transferstock{background-image: url(../../images/icon/menu/transferstock.png) !important;background-size:16px 16px;}
+.menu-transferstockreservation{background-image: url(../../images/icon/menu/transferstockreservation.png) !important;background-size:16px 16px;}
+.menu-transferstockoperation{background-image: url(../../images/icon/menu/transferstockoperation.png) !important;background-size:16px 16px;}
+.menu-stock{background-image: url(../../images/icon/menu/stock.png) !important;background-size:16px 16px;}
+.menu-stocksearch{background-image: url(../../images/icon/menu/stocksearch.png) !important;background-size:16px 16px;}
+.menu-operationflow{background-image: url(../../images/icon/menu/operationflow.png) !important;background-size:16px 16px;}
+.menu-systemmaintenance{background-image: url(../../images/icon/menu/systemmaintenance.png) !important;background-size:16px 16px;}
+.menu-datadict,.menu-dict{background-image: url(../../images/icon/menu/datadict.png) !important;background-size:16px 16px;}
+.menu-role{background-image: url(../../images/icon/menu/role.png) !important;background-size:16px 16px;}
+.menu-staff{background-image: url(../../images/icon/menu/staff.png) !important;background-size:16px 16px;}
+.menu-locationnature{background-image: url(../../images/icon/menu/locationnature.png) !important;background-size:16px 16px;}
+.menu-goodcategory{background-image: url(../../images/icon/menu/goodscategory.png) !important;background-size:16px 16px;}
+.menu-warehousebaseinfo{background-image: url(../../images/icon/menu/warehousebaseinfo.png) !important;background-size:16px 16px;}
+.menu-suppliernature{background-image: url(../../images/icon/menu/suppliernature.png) !important;background-size:16px 16px;}
+.menu-demandernature{background-image: url(../../images/icon/menu/demandernature.png) !important;background-size:16px 16px;}
+.menu-goodscategory{background-image: url(../../images/icon/menu/goodscategory.png) !important;background-size:16px 16px;}
+.menu-locationnature{background-image: url(../../images/icon/menu/locationnature.png) !important;background-size:16px 16px;}
+.menu-instocknature{background-image: url(../../images/icon/menu/instocknature.png) !important;background-size:16px 16px;}
+.menu-outstocknature{background-image: url(../../images/icon/menu/outstocknature.png) !important;background-size:16px 16px;}
+.menu-cancelstockcause{background-image: url(../../images/icon/menu/cancelstockcause.png) !important;background-size:16px 16px;}
+.menu-transferstockcause{background-image: url(../../images/icon/menu/transferstockcause.png) !important;background-size:16px 16px;}
+.menu-unloadway{background-image: url(../../images/icon/menu/unloadway.png) !important;background-size:16px 16px;}
+.menu-staffbaseinfo{background-image: url(../../images/icon/menu/staffbaseinfo.png) !important;background-size:16px 16px;}
+.menu-dept{background-image: url(../../images/icon/menu/dept.png) !important;background-size:16px 16px;}
+.menu-rank{background-image: url(../../images/icon/menu/rank.png) !important;background-size:16px 16px;}
+.menu-group{background-image: url(../../images/icon/menu/group.png) !important;background-size:16px 16px;}
+.menu-log{background-image: url(../../images/icon/menu/log.png) !important;background-size:16px 16px;}

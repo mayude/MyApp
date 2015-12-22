@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 为这个mapper指定一个唯一的namespace，namespace的值习惯上设置成包名+sql映射文件名，这样就能够保证namespace的值是唯一的
+例如namespace="me.gacl.mapping.userMapper"就是me.gacl.mapping(包名)+userMapper(userMapper.xml文件去除后缀)
+ -->
+<mapper namespace="com.myd.mapper.StaffMapper">
+    <!-- 使用缓存 -->
+    <!--
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+     -->
+
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache" >
+        <property name="timeToIdleSeconds" value="3600"/>
+        <property name="timeToLiveSeconds" value="3600"/>
+        <property name="maxEntriesLocalHeap" value="1000"/>
+        <property name="maxEntriesLocalDisk" value="10000000"/>
+        <property name="memoryStoreEvictionPolicy" value="LRU"/>
+    </cache>
+
+
+    <!-- 在select标签中编写查询的SQL语句， 设置select标签的id属性为getUser，id属性值必须是唯一的，不能够重复
+    使用parameterType属性指明查询时使用的参数类型，resultType属性指明查询返回的结果集类型
+    resultType="me.gacl.domain.User"就表示将查询结果封装成一个User类的对象返回
+    User类就是users表所对应的实体类
+    -->
+    <!-- 查询所有的user对象 -->
+    <select id="getall" parameterType="com.myd.entity.Staff" resultType="com.myd.entity.Staff">
+        select * from t_staff where 1=1
+        <if test="staff_name!=null and staff_name !=''">
+            and staff_name=#{staff_name}
+        </if>
+        <if test="staff_password!=null and staff_password !=''">
+            and staff_password=#{staff_password}
+        </if>
+    </select>
+
+    <!-- 根据分页查询数据 -->
+    <select id="findpage" resultType="com.myd.entity.Staff" parameterType="java.util.HashMap">
+        select * from t_staff where 1=1
+        <if test="staff.staff_name!=null and user.staff_name !=''">
+            and staff_name=#{staff.staff_name}
+        </if>
+        <if test="staff.staff_password!=null and staff.staff_password !=''">
+            and staff_password=#{staff.staff_password}
+        </if>
+        limit #{pageable.start},#{pageable.limit}
+    </select>
+
+    <!-- 添加数据 -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="staff_pk" parameterType="com.myd.entity.Staff">
+        <!-- 设置uuid为主键，只针对mysq数据库 -->
+        <selectKey keyProperty="staff_pk" resultType="String" order="BEFORE">
+            select uuid()
+        </selectKey>
+        insert into t_staff (staff_pk, staff_loginname,staff_status, staff_name, staff_password,fk_roles_pk,staff_sex,staff_birthday,staff_intime,staff_phone,staff_email)
+        values
+        (
+        #{staff_pk},#{staff_loginname}, #{staff_status}, #{staff_name}, #{staff_password},#{fk_roles_pk},#{staff_sex},#{staff_birthday},#{staff_intime},#{staff_phone},#{staff_email}
+        )
+
+    </insert>
+
+    <!-- 删除数据 -->
+    <delete id="delete" >
+        delete from t_staff where staff_pk IN
+        <foreach collection="list" item="id"  open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>
