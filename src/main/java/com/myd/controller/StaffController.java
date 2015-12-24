@@ -77,11 +77,11 @@ public class StaffController {
             result = this.staffService.delete(idList);
 
         }
-        String msg = "库区信息删除成功！";
+        String msg = "员工信息删除成功！";
         if(1 == result) {
-            msg = "库区信息删除成功！";
+            msg = "员工信息删除成功！";
         } else if(2 == result) {
-            msg = "库区信息删除失败！！！";
+            msg = "员工信息删除失败！！！";
         }
 
         return new AjaxMessage(1 == result ? true : false, msg);

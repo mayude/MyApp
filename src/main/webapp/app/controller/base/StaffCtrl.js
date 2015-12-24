@@ -54,7 +54,7 @@ Ext.define('QH.controller.base.StaffCtrl',{
         //win.oldSupplierId = 0;
         //保存当前表格的store
         win.parentStore = button.up('grid').getStore();
-        win.setTitle('添加供应商信息');
+        win.setTitle('添加员工信息');
         win.show();
     },
     DeleteClick:function(button){
